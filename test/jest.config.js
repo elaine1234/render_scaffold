@@ -8,5 +8,12 @@ module.exports = {
     testMatch: [
         '<rootDir>/**/*.spec.ts'
     ],
-    // transformIgnorePatterns: ["/node_modules/(?!(d3\-ease|d3\-interpolate)/)", "\\.pnp\\.[^\\\/]+$"],
+    transform: {
+        '^.+\\.jsx?$': 'babel-jest',
+        '^.+\\.ts?$': 'ts-jest',
+    },
+    transformIgnorePatterns: [
+        '/node_modules/(?!d3-(interpolate|color))',
+    ],
+    // transformIgnorePatterns: ["/node_modules\/(?!(d3\-ease|d3\-interpolate)\/)/", "\\.pnp\\.[^\\\/]+$"],
 };

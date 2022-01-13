@@ -9,6 +9,7 @@
     "prestart": "npm run build",
     "start": "webpack-dev-server --open --hot",
     "test": "npx jest --config test/jest.config.js",
+    "coverage": "npx jest --config test/jest.config.js --coverage",
     "clear": "rm -r dist/* || true",
     "watch": "npx tsc -w -m ES2015 --outDir lib",
     "lint": "npx tslint src/**/*.ts",

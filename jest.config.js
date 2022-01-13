@@ -3,15 +3,18 @@ module.exports = {
     testEnvironment: 'jsdom',
     rootDir: __dirname,
     setupFilesAfterEnv: [
-        '<rootDir>/helper.ts'
+        '<rootDir>/test/helper.ts'
     ],
     testMatch: [
-        '<rootDir>/**/*.spec.ts'
+        '<rootDir>/test/**/*.spec.ts'
     ],
     transform: {
         '^.+\\.jsx?$': 'babel-jest',
         '^.+\\.ts?$': 'ts-jest',
     },
+    collectCoverageFrom: [
+        'src/**/*.ts'
+    ],
     transformIgnorePatterns: [
         '/node_modules/(?!d3-(interpolate|color))',
     ],

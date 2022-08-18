@@ -36,6 +36,7 @@
     "html-webpack-plugin": "^5.5.0",
     "jest": "^27.3.1",
     "jsdom": "^18.0.1",
+    "lerna": "^5.4.3",
     "ts-jest": "^27.0.7",
     "ts-loader": "^9.2.6",
     "ts-node": "^10.4.0",
@@ -52,5 +53,8 @@
     "d3-ease": "^3.0.1",
     "d3-interpolate": "^3.0.1",
     "eventemitter3": "^4.0.7"
-  }
+  },
+  "workspaces": [
+    "packages/*"
+  ]
 }

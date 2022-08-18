@@ -1,0 +1,13 @@
+{
+  "name": "render-scaffold-lerna",
+  "private": true,
+  "scripts": {
+    "bootstrap": "lerna bootstrap --force-local"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "lerna": "^5.4.3"
+  }
+}

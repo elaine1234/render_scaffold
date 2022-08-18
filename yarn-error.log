@@ -1,0 +1,41 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn install
+
+PATH: 
+  /Library/Java/JavaVirtualMachines/jdk1.8.0_271.jdk/Contents/Home/bin:/Users/raohai/.cargo/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/raohai/apache-maven-3.6.3/bin:/usr/local/mysql/bin:/Users/raohai/.antigen/bundles/robbyrussell/oh-my-zsh/lib:/Users/raohai/.antigen/bundles/robbyrussell/oh-my-zsh/plugins/z:/Users/raohai/.antigen/bundles/robbyrussell/oh-my-zsh/plugins/git:/Users/raohai/.antigen/bundles/robbyrussell/oh-my-zsh/plugins/heroku:/Users/raohai/.antigen/bundles/robbyrussell/oh-my-zsh/plugins/pip:/Users/raohai/.antigen/bundles/robbyrussell/oh-my-zsh/plugins/lein:/Users/raohai/.antigen/bundles/robbyrussell/oh-my-zsh/plugins/command-not-found:/Users/raohai/.antigen/bundles/zsh-users/zsh-syntax-highlighting
+
+Yarn version: 
+  1.22.4
+
+Node version: 
+  16.13.2
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: getaddrinfo ENOTFOUND registry.yarnpkg.com
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:71:26)
+
+npm manifest: 
+  {
+    "name": "render-scaffold-lerna",
+    "private": true,
+    "scripts": {
+      "bootstrap": "lerna bootstrap --force-local",
+      "postinstall": "lerna bootstrap --force-local",
+      "start": "lerna run start --parallel"
+    },
+    "workspaces": [
+      "packages/*"
+    ],
+    "devDependencies": {
+      "lerna": "^5.4.3"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

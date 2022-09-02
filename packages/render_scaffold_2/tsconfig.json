@@ -100,5 +100,8 @@
     "skipLibCheck": true,                                 /* Skip type checking all .d.ts files. */
     "suppressImplicitAnyIndexErrors": true
   },
-  "include":["src/**/*"]
+  "include":[
+    "./src",
+    "./typings"
+  ]
 }

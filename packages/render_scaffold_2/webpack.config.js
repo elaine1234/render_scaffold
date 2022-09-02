@@ -30,13 +30,22 @@ module.exports = {
     port: 9001,
   },
   module: {
-    rules: [
-      {
-        test: /\.tsx?$/,
-        use: 'ts-loader',
-        exclude: /node_modules/,
-      },
-    ],
+    module: {
+      rules: [
+        {
+          test: /\.worker\.ts$/,
+          loader: "worker-loader",
+          options: {
+            esModule: false,
+          }
+        },
+        {
+          test: /\.tsx?$/,
+          use: 'ts-loader',
+          exclude: /node_modules/,
+        },
+      ],
+    },
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
@@ -51,7 +60,7 @@ module.exports = {
       templateContent: `
         <html>
           <body>
-            <h1>Vital examples</h1>
+            <h1>render-scaffold2 examples</h1>
             <ul>
               ${Object.keys(entriesMap).map(entry => `<li><a href="./${entry}.html">${entry}</a>`).join('\n')}
             </ul>
